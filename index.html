@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1f33">
+  <title>Gold Guard | Security Monitoring</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <aside id="sidebar" aria-label="Main navigation">
+    <div class="brand"><span class="logo" aria-hidden="true">◆</span><div><b>Gold Guard</b><small>Jewelry Security Monitoring</small></div></div>
+    <nav id="nav" aria-label="Dashboard sections"></nav>
+    <div class="side-note"><strong>Human review required</strong><br>Alerts support decisions. They are not proof of theft.</div>
+  </aside>
+  <div id="shade" aria-hidden="true"></div>
+  <div id="main">
+    <header>
+      <button class="icon-btn menu" id="menuBtn" aria-label="Open navigation">☰</button>
+      <div class="page-heading"><h1 id="title">Dashboard</h1><small id="subtitle">Store monitoring overview</small></div>
+      <label class="global-search"><span aria-hidden="true">⌕</span><input id="gsearch" type="search" placeholder="Search products, cameras, alerts…" aria-label="Search dashboard"></label>
+      <div class="hdr-right">
+        <span id="sys" class="pill ok"><i></i><span>Demo data</span></span>
+        <div class="notif-wrap">
+          <button class="icon-btn" id="notifBtn" aria-label="Notifications">♧<b id="ncount" hidden></b></button>
+          <div id="notif" class="notif" aria-live="polite"></div>
+        </div>
+        <div class="profile"><span class="avatar" aria-hidden="true">M</span><span class="pname">Demo Manager<small>Shop Manager · Demo</small></span></div>
+      </div>
+    </header>
+    <div class="demo-banner"><span class="demo-dot"></span><strong>DEMO MODE</strong><span>Displayed camera activity, detections, matches and metrics are simulated. No camera, AI model or database is connected.</span></div>
+    <main id="view" tabindex="-1"></main>
+  </div>
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal-box" id="modalBox"></div>
+  </div>
+  <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
